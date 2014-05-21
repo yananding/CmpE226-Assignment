@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Search</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <style>
+    table,th,td
+   {
+	border:1px solid black;
+	border-collapse:collapse;
+	}
+</style>
+  </head>
+  <body>
+    <h1>Search Results</h1>
+   <h1>TV</h1>
+    <table style="width:500px">
+
+<tr>
+  <td><strong>category</strong></td>
+  <td><strong>price</strong></td>		
+  <td><strong>brand</strong></td>
+  <td><strong>resolution</strong></td>
+  <td><strong>size</strong></td>
+</tr>
+<%
+for(var i in data){
+if("TV"==data[i].category){
+%>
+<tr>
+  <td><%=data[i].category%></td>
+  <td><%=data[i].price%></td>
+  <td><%=data[i].brand%></td>
+  <td><%=data[i].resolution%></td>
+  <td><%=data[i].size%></td> 
+</tr>
+<% }} %> 
+</table>
+
+  <h1>Refrigerator</h1>
+    <table style="width:500px">
+
+<tr>
+  <td><strong>category</strong></td>
+  <td><strong>price</strong></td>		
+  <td><strong>brand</strong></td>
+  <td><strong>weight</strong></td>
+</tr>
+<%
+for(var i in data){
+if("Refrigerator"==data[i].category){
+%>
+<tr>
+  <td><%=data[i].category%></td>
+  <td><%=data[i].price%></td>
+  <td><%=data[i].brand%></td>
+  <td><%=data[i].weight%></td> 
+</tr>
+<% }} %> 
+</table>
+ <h1>Nail Polish</h1>
+    <table style="width:500px">
+
+<tr>
+  <td><strong>category</strong></td>
+  <td><strong>price</strong></td>		
+  <td><strong>color</strong></td>
+  <td><strong>volume</strong></td>
+</tr>
+<%
+for(var i in data){
+if("NailPolish"==data[i].category){
+%>
+<tr>
+  <td><%=data[i].category%></td>
+  <td><%=data[i].price%></td>
+  <td><%=data[i].color%></td>
+  <td><%=data[i].volume%></td> 
+</tr>
+<% }} %> 
+</table>     
+    <h1>Book</h1>
+    <table style="width:500px">
+
+<tr>
+  <td><strong>category</strong></td>
+  <td><strong>price</strong></td>		
+  <td><strong>author</strong></td>
+  <td><strong>ISBN</strong></td>
+  <td><strong>Country</strong></td>
+</tr>
+<%
+for(var i in data){
+if("Book"==data[i].category){
+%>
+<tr>
+  <td><%=data[i].category%></td>
+  <td><%=data[i].price%></td>
+  <td><%=data[i].author%></td>
+  <td><%=data[i].ISBN%></td> 
+  <td><%=data[i].country%></td> 
+</tr>
+<% }} %> 
+</table>
+<br>
+<form>
+<input type="button" value="Back" onClick="history.go(-1);return true;">
+</form>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>USERLIST</title>
+<link rel='stylesheet' href='/stylesheets/style.css' />
+<script type="text/javascript">
+ function showMenu1(){
+   document.getElementById("menu1").style.display="block";
+ }
+  function showMenu2(){
+   document.getElementById("menu2").style.display="block";
+ }
+  function showMenu3(){
+   document.getElementById("menu3").style.display="block";
+ }
+  function showMenu4(){
+   document.getElementById("menu4").style.display="block";
+ }
+ function hideMenu(){
+   document.getElementById("menu1").style.display="none";
+   document.getElementById("menu2").style.display="none";
+   document.getElementById("menu3").style.display="none";
+   document.getElementById("menu4").style.display="none";
+ }
+</script>
+</head>
+<body>
+<h1>CmpE226-Assignment</h1>
+<h2>by Yanan Ding  007555314</h2>
+<h2>Category</h2>
+<form action="/search" method="get">
+<input type="text" placeholder="search" name="search" />
+<input type="submit" value="search"/>
+</form>
+<ul>
+<li><a href="#" onclick='showMenu1()'>Electronics</a></li>
+<ul id="menu1" style="display:none" onmouseout="hideMenu()">
+  <li><a href="TV">TV</a></li>
+</ul>
+<li><a href="#" onclick='showMenu2()'>Appliance</a></li>
+<ul id="menu2" style="display:none" onmouseout="hideMenu()">
+<li><a href="Refrigerator">Refrigerator</a></li>
+</ul>
+<li><a href="#" onclick='showMenu3()'>Beauty</a></li>
+<ul id="menu3" style="display:none" onmouseout="hideMenu()">
+<li><a href="NailPolish">Nail Polish</a></li>
+</ul>
+<li><a href="#" onclick='showMenu4()'>Books</a></li>
+<ul id="menu4" style="display:none" onmouseout="hideMenu()">
+<li><a href="Book">Book</a></li>
+</ul>
+</ul>
+</body>
+</html>

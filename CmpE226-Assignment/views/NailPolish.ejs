@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Nail Polish</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <style>
+    table,th,td
+   {
+	border:1px solid black;
+	border-collapse:collapse;
+	}
+</style>
+  </head>
+  <body>
+  <h1>Nail Polish</h1>
+    <table style="width:500px">
+
+<tr>
+  <td><strong>category</strong></td>
+  <td><strong>price</strong></td>		
+  <td><strong>color</strong></td>
+  <td><strong>volume</strong></td>
+</tr>
+<%
+for(var i in NailPolish){
+if("NailPolish"==NailPolish[i].category){
+%>
+<tr>
+  <td><%=NailPolish[i].category%></td>
+  <td><%=NailPolish[i].price%></td>
+  <td><%=NailPolish[i].color%></td>
+  <td><%=NailPolish[i].volume%></td> 
+</tr>
+<% }} %> 
+</table>
+<br>
+<form>
+<input type="button" value="Back" onClick="history.go(-1);return true;">
+</form>
+  </body>
+</html>

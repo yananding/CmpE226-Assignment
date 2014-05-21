@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Refrigerator</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <style>
+    table,th,td
+   {
+	border:1px solid black;
+	border-collapse:collapse;
+	}
+</style>
+  </head>
+  <body>
+  <h1>Refrigerator</h1>
+    <table style="width:500px">
+
+<tr>
+  <td><strong>category</strong></td>
+  <td><strong>price</strong></td>		
+  <td><strong>brand</strong></td>
+  <td><strong>weight</strong></td>
+</tr>
+<%
+for(var i in Refrigerator){
+if("Refrigerator"==Refrigerator[i].category){
+%>
+<tr>
+  <td><%=Refrigerator[i].category%></td>
+  <td><%=Refrigerator[i].price%></td>
+  <td><%=Refrigerator[i].brand%></td>
+  <td><%=Refrigerator[i].weight%></td> 
+</tr>
+<% }} %> 
+</table>
+<br>
+<form>
+<input type="button" value="Back" onClick="history.go(-1);return true;">
+</form>
+  </body>
+</html>

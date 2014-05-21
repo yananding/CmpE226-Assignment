@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TV</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <style>
+    table,th,td
+   {
+	border:1px solid black;
+	border-collapse:collapse;
+	}
+</style>
+  </head>
+  <body>
+  <h1>TV</h1>
+    <table style="width:500px">
+
+<tr>
+  <td><strong>category</strong></td>
+  <td><strong>price</strong></td>		
+  <td><strong>brand</strong></td>
+  <td><strong>resolution</strong></td>
+  <td><strong>size</strong></td>
+</tr>
+<%
+for(var i in TV){
+if("TV"==TV[i].category){
+%>
+<tr>
+  <td><%=TV[i].category%></td>
+  <td><%=TV[i].price%></td>
+  <td><%=TV[i].brand%></td>
+  <td><%=TV[i].resolution%></td>
+  <td><%=TV[i].size%></td> 
+</tr>
+<% }} %> 
+</table>
+<br>
+<form>
+<input type="button" value="Back" onClick="history.go(-1);return true;">
+</form>
+  </body>
+</html>
